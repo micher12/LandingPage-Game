@@ -1,0 +1,507 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+html,body{
+    height: 100%;
+}
+/*essenciais*/
+header{
+    width: 100%;
+    padding: 10px 0;
+}
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+/*Página*/
+.flex__header{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.logo{
+    width: 180px;
+    height: 45px;
+    background-image: url(../img/logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.desktop{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.desktop ul{
+    width: 600px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.desktop li {
+    margin: 0 10px;
+}
+.desktop li a{
+    text-decoration: none;
+    color: #000;
+}
+.download{
+    background-color: rgb(9, 146, 9);
+    color: #fff !important;
+    padding: 6px 20px;
+    border-radius: 4px;
+    box-shadow: 2px 4px 12px rgb(65, 180, 65);
+}
+.main{
+    position: relative;
+    width: 100%;
+    padding: 70px 0;
+    background-image: url(https://cdn.leonardo.ai/users/48bb00e5-95ed-41f6-b33f-9f15a1d68568/generations/5235f16c-925c-4cf7-8340-13a3213f3631/Leonardo_Diffusion_background_shape_elements_sketch_pattern_mi_2.jpg);
+    background-size: contain;
+}
+.main::before{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    background: linear-gradient(to left,rgba(196, 196, 196, 0.3) 40% ,transparent 70%);
+    backdrop-filter: brightness(0.5);
+    z-index: 1;
+}
+.main::after{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    background: linear-gradient(to right,rgba(154, 197, 181, 0.2) 40% ,transparent 70%);
+    backdrop-filter: brightness(0.5);
+    z-index: 1;
+}
+.main .container{
+    position: relative;
+    z-index: 2;
+}
+.content__flex{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.single__content{
+    width: calc(100%  * (1/2));
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.main .single__content:nth-of-type(2){
+    background-image: url(https://cdn.leonardo.ai/users/48bb00e5-95ed-41f6-b33f-9f15a1d68568/generations/10d3b970-66b3-4f44-b45d-f2bba543130d/variations/Default_dungeon_dital_line_art_green_forest_cinematic_8k_qual_3_10d3b970-66b3-4f44-b45d-f2bba543130d_1.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 50%;
+    border-radius: 22px;
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 20%);
+}
+.single__content h2{
+    font-family: "Poppins";
+    color: #f2f2f2;
+    line-height: 1.6;
+    padding: 20px 0;
+    font-weight: 24px;
+}
+.single__content p{
+    font-family: "Montserrat";
+    line-height: 1.5;
+    padding: 10px 0;
+    font-weight: 500;
+    color: #fff;
+}
+.single__content img{
+    width: 100%;
+}
+.plataforma{
+    width: 140px;
+    height: 45px;
+    background-image: url(../img/googleplay@3x.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 10px 20px;
+}
+a:nth-of-type(2) .plataforma{
+    background-image: url(../img/appstore@3x.png) !important;
+}
+.sobre{
+    position: relative;
+    padding: 70px 0;
+    background-image: url(../img/wave.svg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.sobre .container{
+    position: relative;
+    z-index: 2;
+}
+.sobre .content__flex{
+    align-items:normal;
+}
+.sobre .single__content{
+    background-color: #fff;
+    margin: 0 20px;
+    border-radius: 12px;
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+    justify-content: start;
+    padding: 10px 20px;
+}
+.sobre .single__content h2{
+    color: #222;
+    font-size: 18px;
+    font-weight: 500;
+}
+.sobre .single__content p{
+    color: yellowgreen;
+}
+.sobre::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../img/dust2.svg);
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+    opacity: 0.3;
+    
+}
+.sobre::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../img/blob-haikei.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    animation: bolha 30s linear infinite;
+}
+.sobre .container > h2{
+    padding: 10px 24px;
+    margin-top: 70px;
+    color: #222;
+    display: inline-block;
+    position: relative;
+}
+.sobre .container > h2::before{
+    position: absolute;
+    content: '';
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 20px;
+    border-bottom: 3px solid #9acd32;
+}
+.sobre .content__flex:nth-of-type(2){
+    justify-content: space-between;
+    margin-top: 70px;
+}
+.single__game{
+    width: calc(100% * (1/3));
+    margin: 0 22px;
+    background-color: #fff;
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+    border-radius: 12px;
+}
+.single__game .title{
+    display: flex;
+    justify-content: center;
+}
+.title_icon{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    justify-content: center;
+    background-color: yellowgreen;
+    border-top-left-radius: 12px;
+}
+.icon-game{
+    color: #fff;
+    font-size: 22px;
+}
+.title_text{
+    padding: 10px 0;
+    width: 70%;
+    padding-left: 22px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    border-top-right-radius: 12px;
+}
+.content__game p{
+    font-family: "Montserrat";
+    line-height: 1.3;
+    padding: 30px;
+}
+.content__flex:nth-of-type(3){
+    margin-top: 120px;
+}
+.flex-img-game{
+    width: 50%;
+}
+.gameimg1{
+    height: 600px;
+    background-image: url(https://cdn.leonardo.ai/users/48bb00e5-95ed-41f6-b33f-9f15a1d68568/generations/91e175db-39e6-40e0-8106-d8ba5fbaa449/variations/Default_dungeon_dital_line_art_green_forest_cinematic_8k_qual_0_91e175db-39e6-40e0-8106-d8ba5fbaa449_1.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+}
+.fleximgGames{
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: space-between;
+}
+.gameimg2{
+    width: 100%;
+    height: 280px;
+    background-image: url(https://cdn.leonardo.ai/users/48bb00e5-95ed-41f6-b33f-9f15a1d68568/generations/9a18c621-f408-43c2-9164-516dc4bdb39f/Vintage_Style_Photography_game_style_background_art_for_a_game_3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gameimg3{
+    width: 100%;
+    height: 280px;
+    background-image: url(https://cdn.leonardo.ai/users/48bb00e5-95ed-41f6-b33f-9f15a1d68568/generations/0a2c896b-1e7d-4ce6-a524-0fc4729c5bdb/variations/Default_game_style_background_art_for_a_game_digital_line_art_0_0a2c896b-1e7d-4ce6-a524-0fc4729c5bdb_1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.plataformas{
+    width: 100%;
+    padding: 10px 0;
+    background-color: #37cd32;
+}
+.flex__plataformas{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.single__plataformas{
+    width: 70%;
+    flex-grow: 1;
+}
+.__logo{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+}
+.__logo .logo{
+    background-image: url(../img/logo@3x.png);
+    width: 260px;
+    height: 120px;
+}
+.single__plataformas > h2{
+    color: #fff;
+    position: relative;
+    font-family: "Poppins";
+    padding: 20px 8px;
+}
+.single__plataformas > h2::after{
+    position: absolute;
+    content: '';
+    width: 20%;
+    height: 100%;
+    top: -10px;
+    left: 8px;
+    border-bottom: 3px solid #fff;
+}
+.single__plataformas > p{
+    color: #f2f2f2;
+    padding: 20px 8px;
+    max-width: 600px;
+}
+.logos__plataformas{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 600px;
+    padding: 20px 0;
+}
+.logoPlataforma{
+    width: calc(100% * (1/5));
+    background-image: url(../img/googleplay@3x.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 60px;
+    margin: 0 10px;
+}
+.logos__plataformas .__1{background-image: url(../img/appstore@3x.png);}
+.logos__plataformas .__2{background-image: url(https://logodownload.org/wp-content/uploads/2018/09/playstation-store-logo-1.png);}
+.logos__plataformas .__3{background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c1/Steam_Logo.png);}
+.logos__plataformas .__4{background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Xbox_Logo.svg/1200px-Xbox_Logo.svg.png);}
+footer{
+    width: 100%;
+    padding: 20px 0;
+}
+footer .content__flex{
+    justify-content: space-between;
+}
+.foot-icon{
+    font-size: 25px;
+    color: gray;
+    margin: 0 10px;
+}
+@keyframes bolha{
+    0% {
+        transform: translateX(0px) translateY(0px) rotate(0);
+    }
+    25%{
+        transform: translateX(1200px) translateY(600px) rotate(45deg);
+    }
+    50%{
+        transform: translateX(0) translateY(0) rotate(0);
+    }
+    75%{
+        transform: translateX(-1200px) translateY(-200px) rotate(-90deg);
+    }
+    100%{
+       transform: translateX(0) translateY(0) rotate(0);
+    }
+}
+/*resize ----------------------------*/
+@media screen and (max-width: 1000px){
+    .content__flex:nth-of-type(2){
+        flex-wrap: wrap;
+    }
+    .single__game{
+        width: 45%;
+        margin: 10px;
+    }
+}
+@media screen and (max-width: 800px){
+    .desktop{
+        justify-content: center;
+    }
+    .desktop ul{
+        width: 100%;
+        justify-content: center;
+    }
+    .desktop .download{
+        padding: 4px 6px;
+    }
+    .content__flex:nth-of-type(3){
+        flex-wrap: wrap;
+    }
+    .flex-img-game{
+        width: 100%;
+    }
+    .gameimg1{
+        margin: 0;
+        margin-bottom: 40px;
+        border-radius: 12px;
+    }
+    .fleximgGames{
+        height: auto;
+    }
+    .gameimg2{
+        height: 600px;
+        margin-bottom: 40px;
+        border-radius: 12px;
+    }
+    .gameimg3{
+        height: 600px;
+        border-radius: 12px;
+    }
+    .flex__plataformas{
+        justify-content: center;
+        align-items: center;
+    }
+    .single__plataformas{
+        width: 100%;
+    }
+    .logos__plataformas{
+        width: 100%;
+    }
+    .sobre::after{
+        background-size: 200%;
+    }
+}
+@media screen and (max-width: 700px){
+    .flex__header{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logo{
+        flex-grow: 1;
+        margin-bottom: 20px;
+    }
+    .desktop{
+        padding-bottom: 10px;
+    }
+}
+@media screen and (max-width: 680px){
+    .content__flex{
+        flex-wrap: wrap;
+    }
+    .single__content{
+        width: 100%;
+    }
+    .sobre .single__content{
+        margin-bottom: 20px;
+    }
+    .main .single__content:nth-of-type(2){
+        padding-top: 100%;
+    }
+    .sobre .content__flex:nth-of-type(2){
+        justify-content: center;
+    }
+    .title_icon{
+        padding: 25px 0;
+    }
+    .title_text{
+        padding: 25px 0;
+        padding-left: 22px;
+    }
+    .single__game{
+        width: 100%;
+        margin: 20px 20px;
+    }
+    .logos__plataformas{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logoPlataforma{
+        width: 40%;
+        margin: 20px;
+    }
+}
+@media screen and (max-width: 500px){
+    footer .content__flex{
+        justify-content: center;
+    }
+}
